@@ -11,26 +11,26 @@
  <a href="#Tecnologias">Tecnologias</a> • 
 </p>
 
-## 📖 Sobre o Projeto
+## Sobre o Projeto
 
 Este projeto consiste em um **simulador de um sistema de gerenciamento de uma livraria**, desenvolvido para a disciplina de **Algoritmos e Estruturas de Dados 1**.  
 O sistema utiliza **Listas Encadeadas** e **Alocação Dinâmica** para armazenar e gerenciar os livros, além de um **Bubble Sort** para organizá-los por título.
 
-## 🏗 Estrutura
+## Estrutura
 
 - [x] Cadastro de livros  
 - [x] Remoção de livros  
 - [x] Ordenação de livros por título (Bubble Sort)  
 - [x] Listagem de livros  
 
-## ⚙️ Funcionalidades
+## Funcionalidades
 
 - [x] Adicionar livros à coleção  
 - [x] Remover livros do sistema  
 - [x] Exibir todos os livros cadastrados  
 - [x] Ordenar os livros automaticamente pelo título  
 
-## 🛠 Tecnologias
+## Tecnologias
 
 - Linguagem: **C/C++**
 - Estruturas de Dados: **Listas Encadeadas**
