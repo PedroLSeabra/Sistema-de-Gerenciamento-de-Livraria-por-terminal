@@ -1,7 +1,6 @@
 
 #include "Livraria.h"
 
-// Funcao para criar um novo livro
 Livro* criarLivro(char* titulo, char* autor, char* ISBN, int status) {
     Livro* novoLivro = (Livro*)malloc(sizeof(Livro));
     if (novoLivro == NULL) {
@@ -16,17 +15,14 @@ Livro* criarLivro(char* titulo, char* autor, char* ISBN, int status) {
     return novoLivro;
 }
 
-// Funcao printar opcao invalida
 void printOpcaoInvalida() {
     printf("\nOpcao invalida! Tente novamente.\n");
 }
 
-// Funcao printar lista vazia
 void printListaVazia() {
     printf("Nenhum livro na lista.\n");
 }
 
-// Funcao para adicionar um livro a lista
 void adicionarLivro(Livro** lista, Livro* novoLivro) {
     if (*lista == NULL) {
         *lista = novoLivro;
@@ -40,7 +36,6 @@ void adicionarLivro(Livro** lista, Livro* novoLivro) {
     printf("Livro adicionado com sucesso!\n");
 }
 
-// Funcao para listar todos os livros
 void listarLivros(Livro* lista) {
     if (lista == NULL) {
         printListaVazia();
@@ -57,7 +52,6 @@ void listarLivros(Livro* lista) {
     }
 }
 
-// Funcao para listar os livros Disponiveis
 void listarLivrosDisponiveis(Livro* lista) {
     if (lista == NULL) {
         printListaVazia();
@@ -76,7 +70,6 @@ void listarLivrosDisponiveis(Livro* lista) {
     }
 }
 
-// Funcao para listar os livros Emprestados
 void listarLivrosEmprestados(Livro* lista) {
     if (lista == NULL) {
         printListaVazia();
@@ -95,7 +88,6 @@ void listarLivrosEmprestados(Livro* lista) {
     }
 }
 
-// Funcao para atualizar um livro pelo ISBN
 void atualizarLivro(Livro* lista, char* ISBN) {
     if (lista == NULL) {
         printListaVazia();
@@ -123,7 +115,6 @@ void atualizarLivro(Livro* lista, char* ISBN) {
     printf("Livro com ISBN %s nao encontrado.\n", ISBN);
 }
 
-// Funcao para deletar um livro pelo ISBN
 void deletarLivro(Livro** lista, char* ISBN) {
     if (*lista == NULL) {
         printListaVazia();
@@ -149,7 +140,6 @@ void deletarLivro(Livro** lista, char* ISBN) {
     printf("Livro com ISBN %s nao encontrado.\n", ISBN);
 }
 
-// Funcao Bubble Sort para ordenar livros por titulo
 void bubbleSort(Livro** lista) {
     if (*lista == NULL) {
         printListaVazia();
@@ -194,7 +184,6 @@ void bubbleSort(Livro** lista) {
     printf("Livros ordenados por titulo.\n");
 }
 
-// Funcao para imprimir o Menu na tela
 void interfaceMenu(int* opcao) {
     printf("\nMenu:\n");
     printf("1. Adicionar livro\n");
@@ -207,8 +196,6 @@ void interfaceMenu(int* opcao) {
     scanf("%d", opcao);
     getchar();
 }
-
-// Funcao para inserir um livro na lista
 void inputDadosLivro(Livro** lista) {
     char titulo[100], autor[50], ISBN[13];
     int status = 99;
@@ -238,7 +225,6 @@ void inputDadosLivro(Livro** lista) {
 
 }
 
-// Funcao para pegar uma input de string
 char* pegarString(char string[15]) {
     char *ISBN = malloc(sizeof(char) * 13);
     printf("Digite o ISBN do livro a ser %s: ", string);
@@ -248,7 +234,6 @@ char* pegarString(char string[15]) {
     return ISBN;
 }
 
-// Funcao para liberar a memoria da lista
 void liberarMemoriaLista(Livro* lista) {
     Livro* temp;
     while (lista != NULL) {
@@ -258,7 +243,6 @@ void liberarMemoriaLista(Livro* lista) {
     }
 }
 
-// Funcao para listar as listagens de livros
 void interfaceListarLivros(Livro* lista) {
 
     int opcao;
