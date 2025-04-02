@@ -9,16 +9,14 @@
 #define limpar_tela "clear"
 #endif
 
-// Definição da estrutura Livro
 typedef struct Livro {
     char titulo[100];
     char autor[50];
     char ISBN[13];
-    int status; // 0 para disponível, 1 para emprestado
+    int status; 
     struct Livro *prox;
 } Livro;
 
-// Função para criar um novo livro
 Livro* criarLivro(char* titulo, char* autor, char* ISBN, int status);
 
 // Função printar opcao invalida
