@@ -1,6 +1,5 @@
 #include "Livraria.c"
 
-// Função principal
 int main() {
     Livro* listaLivros = NULL;
     int opcao;
